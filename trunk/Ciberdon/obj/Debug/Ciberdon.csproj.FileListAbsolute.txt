@@ -1,0 +1,5 @@
+C:\Projects\Ciberdon\Ciberdon\bin\Ciberdon.dll
+C:\Projects\Ciberdon\Ciberdon\bin\Ciberdon.pdb
+C:\Projects\Ciberdon\Ciberdon\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Ciberdon\Ciberdon\obj\Debug\Ciberdon.dll
+C:\Projects\Ciberdon\Ciberdon\obj\Debug\Ciberdon.pdb
