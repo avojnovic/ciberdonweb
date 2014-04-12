@@ -20,7 +20,7 @@
     padding-top:10px;
 }
 .theme-default .nivo-controlNav a {
-	display:inline-block;
+	display:none;
 	width:15px;
 	height:15px;
 	background:#FFF;
