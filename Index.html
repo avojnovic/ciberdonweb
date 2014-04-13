@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE HTML>
-
 <html>
 <head>
     <title>Ciberdon Regalos</title>
@@ -16,106 +15,146 @@
     </script>
 </head>
 <body>
-    <div class="header">
-        <div class="wrap">
-            <div class="header-top">
-                <div class="logo">
-                    <h1>
-                        <a href="index.html"><img class="logoImg" src="images/ciberdon.png" align="left" id="img" alt="" /></a>
-                        <script>
-                            jQuery.fn.center = function () {
-                                var maxHeight = "200px";
+    <div class="logo">
+      
+            <a href="index.html"><img class="logoImg" src="images/ciberdon.png" align="left" id="img" alt="" /></a>
+            <script>
+                jQuery.fn.center = function () {
+                    var maxHeight = "200px";
 
-                                if (this.height() > maxHeight) {
-                                    this.css("max-height", maxHeight);
-                                } else {
-                                    this.css("max-height", "90%");
-                                }
+                    if (this.height() > maxHeight) {
+                        this.css("max-height", maxHeight);
+                    } else {
+                        this.css("max-height", "90%");
+                    }
 
-                                this.css("position", "absolute");
-                                var por = (($(window).width() * 200) / 1220);
-                                if (por > 200) {
-                                    this.css("height", 200);
-                                    this.css("width", 200);
-                                }
-                                else {
-                                    this.css("height", por);
-                                    this.css("width", por);
-                                }
-                                return this;
-                            }
+                    this.css("position", "fixed");
+                    var por = (($(window).width() * 200) / 1220);
+                    if (por > 200) {
+                        this.css("height", 200);
+                        this.css("width", 200);
+                    }
+                    else {
+                        this.css("height", por);
+                        this.css("width", por);
+                    }
+                    return this;
+                }
 
-                            $(window).load(function () {
-                                $("#img").center();
+                $(window).load(function () {
+                    $("#img").center();
 
-                                $(window).on("resize", function () {
-                                    $("#img").center();
-                                });
-                            });
+                    $(window).on("resize", function () {
+                        $("#img").center();
+                    });
+                });
                         
-                        </script>
-                    </h1>
-                </div>
-                <div class="clear">
-                </div>
-            </div>
+            </script>
+       
+    </div>
+    <div class="header">
+        <div class="cssmenu">
+            <ul>
+                <li><span>
+                    <div class="marginLink">
+                    </div>
+                </span></li>
+                <li class="active"><a href="index.html"><span>
+                    <img class="imgMenu" src="images/btnHomeAct.png" align="left" alt="" /><div class="marginLink">
+                        Inicio</div>
+                </span></a></li>
+                <li><a href="Productos.html"><span>
+                    <img class="imgMenu" src="images/btnProducts.png" align="left" alt="" /><div class="marginLink">
+                        Productos</div>
+                </span></a></li>
+                <li><a href="Novedades.html"><span>
+                    <img class="imgMenu" src="images/btnNews.png" align="left" alt="" /><div class="marginLink">
+                        Novedades</div>
+                </span></a></li>
+                <li class="last"><a href="Contacto.html"><span>
+                    <img class="imgMenu" src="images/btnContact.png" align="left" alt="" /><div class="marginLink">
+                        Contacto</div>
+                </span></a></li>
+            </ul>
         </div>
     </div>
-	<div class="follow_icon">
-	<ul >
-					<li><a href="https://www.facebook.com/ciberdon" target="_blank" style="opacity: 1;"><img src="images/facebook_fill.png" alt=""></a></li>
-					<li><a href="https://www.twitter.com/ciberdonregalos" target="_blank" style="opacity: 1;"><img src="images/twitter_fill.png" alt=""></a></li>
-					<li><a href="http://www.instagram.com/ciberdonregalos" target="_blank" style="opacity: 1;"><img src="images/instagram_fill.png" alt=""></a></li>
-					<li><a href="https://plus.google.com/110186566023741620761/about" target="_blank" style="opacity: 1;"><img src="images/googleplus_fill.png" alt=""></a></li>
-	 </ul>
-	</div>
-    <div class="banner" data-slide="1">
-        <div class="wrap">
-            <div class="cssmenu">
-                <ul>
-					 <li><span><div class="marginLink" > </div></span></li>
-                    <li class="active"><a href="index.html"><span><img class="imgMenu" src="images/btnHomeAct.png" align="left" alt="" /><div class="marginLink" >Inicio</div></span></a></li>
-                    <li><a href="Productos.html"><span><img class="imgMenu" src="images/btnProducts.png" align="left" alt="" /><div class="marginLink" >Productos</div></span></a></li>
-                    <li><a href="Novedades.html"><span><img class="imgMenu" src="images/btnNews.png" align="left" alt="" /><div class="marginLink" >Novedades</div></span></a></li>
-                    <li class="last"><a href="Contacto.html"><span><img class="imgMenu" src="images/btnContact.png" align="left" alt="" /><div class="marginLink" >Contacto</div></span></a></li>
-                   
-                </ul>
-            </div>
+    <div class="follow_icon">
+        <ul>
+            <li><a href="https://www.facebook.com/ciberdon" target="_blank" style="opacity: 1;">
+                <img src="images/facebook_fill.png" alt=""></a></li>
+            <li><a href="https://www.twitter.com/ciberdonregalos" target="_blank" style="opacity: 1;">
+                <img src="images/twitter_fill.png" alt=""></a></li>
+            <li><a href="http://www.instagram.com/ciberdonregalos" target="_blank" style="opacity: 1;">
+                <img src="images/instagram_fill.png" alt=""></a></li>
+            <li><a href="https://plus.google.com/110186566023741620761/about" target="_blank"
+                style="opacity: 1;">
+                <img src="images/googleplus_fill.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <div class="Slide1">
             <!------ Slider ------------>
             <div class="slider">
                 <div class="sliderBorder">
                     <div class="sliderBorder2">
-                    <div class="slider-wrapper theme-default">
-                        <div id="slider" class="nivoSlider">
-                            <img src="images/banner1.jpg" alt="" />
-                            <img src="images/banner2.jpg" alt="" />
-                            <img src="images/banner3.jpg" alt="" />
-                            <img src="images/banner4.jpg" alt="" />
-                            <img src="images/banner5.jpg" alt="" />
+                        <div class="slider-wrapper theme-default">
+                            <div id="slider" class="nivoSlider">
+                                <img src="images/banner1.jpg" alt="" />
+                                <img src="images/banner2.jpg" alt="" />
+                                <img src="images/banner3.jpg" alt="" />
+                                <img src="images/banner4.jpg" alt="" />
+                                <img src="images/banner5.jpg" alt="" />
+                            </div>
                         </div>
                     </div>
-                  </div>
                 </div>
             </div>
             <!------End Slider ------------>
         </div>
-    </div>
-    <br />
-    <div class="content-top">
-        <div class="top-box">
-            <h2>
-                <a data-slide="2">¿QUIENES SOMOS?</a></h2>
+        <div class="Slide2">
+            <div class="Slide2Title">
+                ¿QUIENES SOMOS?
+            </div>
+            <div class="Slide2Body">
+                Ciberdon Regalos es una empresa familiar dedicada exclusivamente a ofrecer a sus
+                clientes la más amplia variedad de productos personalizados para todo tipo de eventos,
+                logrando que cada uno de ellos se vuelva único y original.
+                <br />
+                <br />
+                Esos momentos únicos en la vida, los cuales se desean recordarlos y guardarlos como
+                un tesoro, son los momentos en los que Ciberdon Regalos se inspira para desarrollar
+                toda su creatividad y originalidad. Brindándole a sus clientes, el mejor detalle
+                en sus productos personalizados, haciendo que estos se diferencie entre los demás
+                por su originalidad.
+                <br />
+                <br />
+                Ofrecemos una gran variedad de ideas y regalos personalizados para cada ocasión.
+                Ya sea un cumpleaños, aniversario, casamiento, nacimiento, bautismo, comunión y
+                cualquier momento en el que quieras sorprender con un gran regalo o un detalle original.
+                <br />
+                <br />
+                Dentro de la línea de productos personalizados Ciberdon Regalos, se puede encontrar:
+                ALMOHADÓN • AZULEJO • BABERO • BOTELLA • BURBUJEROS • CARTUCHERA • DELANTAL • FOTORECUERDOS
+                • IMAN • LLAVERO • LLAVERO DESTAPADOR • MANTEL • MOCHILA • MOUSEPAD • PRENDEDOR
+                • POSAVASO • TAZA • TAZA MÁGICA • TAZA PLASTICA • TOALLA • RELOJ • REMERA • ROMPECABEZA
+                • SERVILLETA • STCIKERS PARA CANDY BAR • VASO PLASTICO y mucho más.
+                <br />
+                <br />
+                No esperes más y comenzá a disfrutar de nuestros regalos personalizados. ¡Que no
+                te de regalar lo mismo, REGALOS PERSONALIZADOS, Ciberdon Regalos tu mejor opción!
+            </div>
+        </div>
+        <div class="footer">
+            <img src="images/line.png" alt="" />
+            <p>
+                Avenida Eva Perón 4227 - CP B1716CHH - Libertad (Merlo) - Buenos Aires - Argentina
+                | (54) 0220 - 497 2871 | Email ciberdon.regalos@gmail.com
+            </p>
+            <div class="copy">
+                <p>
+                    © 2014 All rights Reserved | Design by @alanvojnovic & @nuelia</p>
+            </div>
         </div>
     </div>
-    <div data-slide="2">
-    </div>
-    <div class="footer" >
-		<img src="images/line.png" alt="" >
-          		<p> Avenida Eva Perón 4227 - CP B1716CHH - Libertad (Merlo) - Buenos Aires - Argentina | (54) 0220 - 497 2871 | Email ciberdon.regalos@gmail.com </p>
-				
-				<div class="copy">
-					<p> © 2014 All rights Reserved | Design by @alanvojnovic & @nuelia</p>
-				</div>
-        </div>
 </body>
 </html>

@@ -1,5 +1,13 @@
 .slider{
 	position:relative;
+	background-color:#1BBC9B;
+	width:80%;
+    margin:0 auto;
+	-moz-transition:all .2s linear;
+	-webkit-transition:all .2s linear; 
+	-o-transition:all .2s linear; 
+	-ms-transition:all .2s linear;
+	
 }
 .theme-default .nivoSlider {
 	position:relative;
