@@ -113,6 +113,7 @@ body{
 	position: absolute;
 	top: 0px; left: 0px;
 	
+	
 }
 .marginLink
 {
@@ -212,7 +213,7 @@ body{
 .follow_icon {
 	list-style: none;
 	padding: 2% 0;
-	position:absolute;
+	position:fixed;
 	bottom: 75px; left: 25px;
 	z-index: 10000;
 }
