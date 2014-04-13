@@ -16,41 +16,40 @@
 </head>
 <body>
     <div class="logo">
-      
-            <a href="index.html"><img class="logoImg" src="images/ciberdon.png" align="left" id="img" alt="" /></a>
-            <script>
-                jQuery.fn.center = function () {
-                    var maxHeight = "200px";
+        <a href="index.html">
+            <img class="logoImg" src="images/ciberdon.png" align="left" id="img" alt="" /></a>
+        <script>
+            jQuery.fn.center = function () {
+                var maxHeight = "200px";
 
-                    if (this.height() > maxHeight) {
-                        this.css("max-height", maxHeight);
-                    } else {
-                        this.css("max-height", "90%");
-                    }
-
-                    this.css("position", "fixed");
-                    var por = (($(window).width() * 200) / 1220);
-                    if (por > 200) {
-                        this.css("height", 200);
-                        this.css("width", 200);
-                    }
-                    else {
-                        this.css("height", por);
-                        this.css("width", por);
-                    }
-                    return this;
+                if (this.height() > maxHeight) {
+                    this.css("max-height", maxHeight);
+                } else {
+                    this.css("max-height", "90%");
                 }
 
-                $(window).load(function () {
-                    $("#img").center();
+                this.css("position", "fixed");
+                var por = (($(window).width() * 200) / 1220);
+                if (por > 200) {
+                    this.css("height", 200);
+                    this.css("width", 200);
+                }
+                else {
+                    this.css("height", por);
+                    this.css("width", por);
+                }
+                return this;
+            }
 
-                    $(window).on("resize", function () {
-                        $("#img").center();
-                    });
+            $(window).load(function () {
+                $("#img").center();
+
+                $(window).on("resize", function () {
+                    $("#img").center();
                 });
+            });
                         
-            </script>
-       
+        </script>
     </div>
     <div class="header">
         <div class="cssmenu">
@@ -115,7 +114,9 @@
             <div class="Slide2Title">
                 ¿QUIENES SOMOS?
             </div>
+            <center>
             <div class="Slide2Body">
+           
                 Ciberdon Regalos es una empresa familiar dedicada exclusivamente a ofrecer a sus
                 clientes la más amplia variedad de productos personalizados para todo tipo de eventos,
                 logrando que cada uno de ellos se vuelva único y original.
@@ -143,6 +144,7 @@
                 No esperes más y comenzá a disfrutar de nuestros regalos personalizados. ¡Que no
                 te de regalar lo mismo, REGALOS PERSONALIZADOS, Ciberdon Regalos tu mejor opción!
             </div>
+            </center>
         </div>
         <div class="footer">
             <img src="images/line.png" alt="" />
