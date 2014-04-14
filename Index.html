@@ -7,16 +7,25 @@
     <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+ 
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.qtip-1.0.0-rc3.min.js"></script>
-    <link href= "favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
     <script type="text/javascript">
+        //Slider Inicio
         $(window).load(function () {
-            $('#slider').nivoSlider();
+            $('#slider1').nivoSlider();
+            $('#slider2').nivoSlider();
         });
     </script>
+    
     <script type="text/javascript">
+        //LAZY LOADING FOR IMGs
+        jQuery(document).ready(function () {
+            jQuery("img.lazy").lazy();
+        });
 
         $(document).ready(function () {
             $(window).resize(function (e) {
@@ -52,6 +61,9 @@
             $('.slide').css('height', height);
         }
     </script>
+    
+
+
 </head>
 <body>
     <div class="header">
@@ -144,7 +156,7 @@
                 <div class="sliderBorder">
                     <div class="sliderBorder2">
                         <div class="slider-wrapperper theme-default">
-                            <div id="slider" class="nivoSlider">
+                            <div id="slider1" class="nivoSlider">
                                 <img src="images/banner1.jpg" alt="" />
                                 <img src="images/banner2.jpg" alt="" />
                                 <img src="images/banner3.jpg" alt="" />
@@ -159,6 +171,7 @@
         </div>
     </div>
     <div class="slide Slide2" data-slide="2">
+        <!-- quienes somos slide-->
         <div class="wrapper">
             <div class="Slide2Title">
                 ¿QUIENES SOMOS?
@@ -206,19 +219,49 @@
         </div>
     </div>
     <div class="slide Slide3" data-slide="3">
+        <!--Productos-->
         <div class="wrapper">
+            <!-- 
+       usar lazy load asi las imagenes no cargan antes y la pagina funciona mas rapido
+       
+       <img class="lazy" data-src="path_to/image.jpg" src="" />
+       
+       -->
+                 <!------ Slider ------------>
+            <div class="slider">
+                <div class="sliderBorder">
+                    <div class="sliderBorder2">
+                        <div class="slider-wrapperper theme-default">
+                            <div id="slider2" class="nivoSlider thumbs">
+                                <img src="images/Products/1.jpg" data-thumb="images/Products/1Thumb.png" alt="" />
+                                <img src="images/Products/2.jpg" data-thumb="images/Products/2Thumb.png" alt="" />
+
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!------End Slider ------------>
+ 
         </div>
     </div>
     <div class="slide Slide4" data-slide="4">
+        <!--Comprar-->
         <div class="wrapper">
         </div>
     </div>
     <div class="slide Slide5" data-slide="5">
+        <!--Novedades-->
         <div class="wrapper">
         </div>
     </div>
     <div class="slide Slide6" data-slide="6">
+        <!--Contacto-->
         <div class="wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3280.585161068186!2d-58.689155899999996!3d-34.690418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc0f67870d291%3A0xb51e4a42818327b6!2sAv+Eva+Per%C3%B3n+4227!5e0!3m2!1sen!2sar!4v1397484230085"
+                width="400" height="300" frameborder="0" style="border: 0"></iframe>
         </div>
     </div>
     <div class="footer">
@@ -228,7 +271,8 @@
             | (54) 0220 - 497 2871 | Email ciberdon.regalos@gmail.com
         </p>
         <div class="copy">
-            <p>© 2014 All rights Reserved | Design by @alanvojnovic & @nuelia</p>
+            <p>
+                © 2014 All rights Reserved | Design by @alanvojnovic & @nuelia</p>
         </div>
     </div>
 </body>

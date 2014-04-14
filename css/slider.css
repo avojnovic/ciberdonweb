@@ -9,6 +9,8 @@
 	-ms-transition:all .2s linear;
 	
 }
+
+
 .theme-default .nivoSlider {
 	position:relative;
 	background:#1BBC9B url(../images/loading.gif) no-repeat 50% 50%; 
@@ -28,7 +30,7 @@
     padding-top:10px;
 }
 .theme-default .nivo-controlNav a {
-	display:none;
+	display:relative;
 	width:15px;
 	height:15px;
 	background:#FFF;
@@ -75,14 +77,16 @@
 	background: none;
 	margin-bottom: 5px;
 }
+
 .theme-default .nivo-controlNav.nivo-thumbs-enabled img 
 {
-     margin-left:auto;
+    margin-left:auto;
     margin-right:auto;
     width:70%;
-	display: block;
+	display: inline;
 	width: 120px;
 	height: auto;
+	
 }
 /* The Nivo Slider styles */
 .nivoSlider {
