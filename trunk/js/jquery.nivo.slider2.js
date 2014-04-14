@@ -8,9 +8,9 @@
  */
 
 (function($) {
-    var NivoSlider = function(element, options){
+    var nivoSlider2 = function(element, options){
         // Defaults are below
-        var settings = $.extend({}, $.fn.nivoSlider.defaults, options);
+        var settings = $.extend({}, $.fn.nivoSlider2.defaults, options);
 
         // Useful variables. Play carefully.
         var vars = {
@@ -25,7 +25,7 @@
 
         // Get this slider
         var slider = $(element);
-        slider.data('nivo:vars', vars).addClass('nivoSlider');
+        slider.data('nivo:vars', vars).addClass('nivoSlider2');
 
         // Find our slider children
         var kids = slider.children();
@@ -620,20 +620,20 @@
         return this;
     };
         
-    $.fn.nivoSlider = function(options) {
+    $.fn.nivoSlider2 = function(options) {
         return this.each(function(key, value){
             var element = $(this);
             // Return early if this element already has a plugin instance
-            if (element.data('nivoslider')) { return element.data('nivoslider'); }
+            if (element.data('nivoSlider2')) { return element.data('nivoSlider2'); }
             // Pass options to plugin constructor
-            var nivoslider = new NivoSlider(this, options);
+            var nivoSlider2 = new nivoSlider2(this, options);
             // Store plugin object in this element's data
-            element.data('nivoslider', nivoslider);
+            element.data('nivoSlider2', nivoSlider2);
         });
     };
     
     //Default settings
-    $.fn.nivoSlider.defaults = {
+    $.fn.nivoSlider2.defaults = {
         effect: 'random',
         slices: 4,
         boxCols: 8,
@@ -642,7 +642,7 @@
         pauseTime: 3000,
         startSlide: 0,
         directionNav: true,
-        controlNav: true,
+        controlNav: false,
         controlNavThumbs: true,
         pauseOnHover: true,
         manualAdvance: false,
