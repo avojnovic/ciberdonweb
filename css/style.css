@@ -116,8 +116,7 @@ img
 }
 body
 {
-    font-family: Humanst521 BT, sans-serif;
-    background: #2D3E50;
+    background-color: #72869C;
 }
 
 /*--header--*/
@@ -209,10 +208,10 @@ body
     width: auto;
     min-height: 400px;
     height: 100%;
-    margin: 0 auto;
+    margin: 130px auto;
     position: relative;
     max-width: 1920px;
-    padding: 130px 0 0 0;
+    padding: 0 0 0 0;
 }
 
 
@@ -237,6 +236,7 @@ body
 }
 .Slide2
 {
+    
     background: #43586E;
     text-align: justify;
 }
@@ -282,16 +282,16 @@ body
 {
     width: 80%;
     height: auto;
-    text-align:justify;
+    text-align: justify;
     color: #FFF;
     font-size: 3em;
     font: normal 20px/20px Humanst521 BT, sans-serif;
 }
 .Slide2Body > h1
 {
-    font-weight:bold;
+    font-weight: bold;
     font-size: 3,01em;
-    color:#1BBC9B;
+    color: #1BBC9B;
     display: inline;
 }
 
