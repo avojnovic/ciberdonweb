@@ -258,17 +258,23 @@ body
 .sliderBorder
 {
     border-style: solid;
-    border-color: #72869C #72869C;
+    border-color: #72869C;
     border-width: 10px;
 }
 .sliderBorder2
 {
     border-style: solid;
-    border-color: #2D3E50 #2D3E50;
+    border-color: #2D3E50;
+    border-width: 20px;
+}
+.sliderBorder3
+{
+    border-style: solid;
+    border-color: #25384D;
     border-width: 20px;
 }
 /*--content--*/
-.Slide2Title
+.SlideTitle
 {
     text-align: center;
     color: #FFF;
