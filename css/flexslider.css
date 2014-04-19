@@ -12,26 +12,12 @@
 .sliderInicio   
 {
     position:relative;
-	width:80%;
-    }
-    
-    
-.sliderProducts{
-	position:relative;
-	width:100%;
-    margin:0 auto;
-}
-.bigSlider{
-	position:relative;
-	width:60%; 
-	 margin:0 auto;
-}
-.bigThumbnails{
-	position:relative;
-	width:80%; 
-	 margin:0 auto;
+	width:70%;
 
-}
+	margin:0 auto;
+  }
+    
+    
 
 /* Browser Resets
 *********************************/

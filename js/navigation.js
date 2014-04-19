@@ -7,7 +7,7 @@ jQuery(document).ready(function ($)
     function goToByScroll(dataslide)
     {
         htmlbody.animate({
-            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
+            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top - $("#header").height() 
         }, 1000, 'easeInOutQuint');
     }
 
