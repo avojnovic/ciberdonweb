@@ -3,134 +3,65 @@
 <head>
     <title>Ciberdon Regalos</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-   
     <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.qtip-1.0.0-rc3.min.js"></script>
     <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script>
     <script defer src="js/jquery.flexslider.js"></script>
-    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
-
     <script type="text/javascript">
-       
-        $(window).load(function () {
-            $('#carousel').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 200,
-                itemMargin: 5,
-                asNavFor: '#slider'
-            });
 
-            $('#slider').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                sync: "#carousel",
-                start: function (slider) {
-                    $('body').removeClass('loading');
-                }
-            });
+        $(document).ready(function () {
+
 
             $('#sliderInicio').flexslider({
                 animation: "slide",
                 controlNav: false,
                 animationLoop: true,
-                pauseOnHover:true,
+                pauseOnHover: true,
                 slideshow: true,
-                slideshowSpeed:3000,
+                slideshowSpeed: 3000,
                 start: function (slider) {
                     $('body').removeClass('loading');
                 }
             });
-            
+
 
         });
     </script>
-    <script type="text/javascript">
-        //LAZY LOADING FOR IMGs
-        jQuery(document).ready(function () {
-            jQuery("img.lazy").lazy();
-        });
+    <script type='text/javascript'>
+        //Initial load of page
+        $(document).ready(sizeContent);
 
-        $(document).ready(function () {
-            $(window).resize(function (e) {
-                resizePages();
-            });
-            resizePages();
+        //Every resize of window
+        $(window).resize(sizeContent);
 
-            $('.servicios a[title]').qtip({
-                position: {
-                    corner: {
-                        tooltip: 'leftMiddle', // Use the corner...
-                        target: 'rightMiddle' // ...and opposite corner
-                    }
-                },
-                style: {
-                    border: {
-                        width: 5,
-                        radius: 10
-                    },
-                    padding: 10,
-                    textAlign: 'center',
-                    tip: true, // Give it a speech bubble tip with automatic corner detection
-                    name: 'cream' // Style it according to the preset 'cream' style
-                }
-            });
+        function sizeContent() {
+            var newHeight = $(window).height() - $("#header").height() - $("#footer").height() + "px";
+            $("#div1").css("height", newHeight);
+            $("#div1").css("margin", $("#header").height() + "px 0 0 0");
 
-        });
+            $("#div2").css("height", newHeight);
+            $("#div3").css("height", newHeight);
+            $("#div4").css("height", newHeight);
+            $("#div5").css("height", newHeight);
+            $("#div6").css("height", newHeight);
+            $("#div6").css("margin", "0 0 " + $("#footer").height() + "px 0");
 
-        function resizePages() {
-            var h = $(window).height();
-            var w = $(window).width();
-            var height = h < 640 ? 640 : h;
-            $('.slide').css('height', height);
         }
     </script>
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="header">
         <div data-slide="1" class="logo menu-button">
-            <a href="#"><img src="images/ciberdon.png" align="left" id="img" alt="" /></a>
-            <!-- <script>
-            jQuery.fn.center = function () {
-                var maxHeight = "200px";
-
-                if (this.height() > maxHeight) {
-                    this.css("max-height", maxHeight);
-                } else {
-                    this.css("max-height", "90%");
-                }
-
-                this.css("position", "fixed");
-                var por = (($(window).width() * 200) / 1220);
-                if (por > 200) {
-                    this.css("height", 200);
-                    this.css("width", 200);
-                }
-                else {
-                    this.css("height", por);
-                    this.css("width", por);
-                }
-                return this;
-            }
-
-            $(window).load(function () {
-                $("#img").center();
-
-                $(window).on("resize", function () {
-                    $("#img").center();
-                });
-            });
-                        
-        </script>-->
+            <a href="#">
+                <img src="images/ciberdon.png" align="left" id="img" alt="" /></a>
         </div>
         <div class="cssmenu">
             <ul>
@@ -168,39 +99,41 @@
     <div class="follow_icon">
         <ul>
             <li><a href="https://www.facebook.com/ciberdon" target="_blank" style="opacity: 1;">
-                <img src="images/facebook_fill.png" alt=""></a></li>
+                <img class="imgRotate" src="images/facebook_fill.png" alt=""></a></li>
             <li><a href="https://www.twitter.com/ciberdonregalos" target="_blank" style="opacity: 1;">
-                <img src="images/twitter_fill.png" alt=""></a></li>
+                <img class="imgRotate" src="images/twitter_fill.png" alt=""></a></li>
             <li><a href="http://www.instagram.com/ciberdonregalos" target="_blank" style="opacity: 1;">
-                <img src="images/instagram_fill.png" alt=""></a></li>
+                <img class="imgRotate" src="images/instagram_fill.png" alt=""></a></li>
             <li><a href="https://plus.google.com/110186566023741620761/about" target="_blank"
                 style="opacity: 1;">
-                <img src="images/googleplus_fill.png" alt=""></a></li>
+                <img class="imgRotate" src="images/googleplus_fill.png" alt=""></a></li>
         </ul>
     </div>
     <div class="slide Slide1" data-slide="1">
-        <div class="wrapper">
+        <div id="div1" class="wrapper">
             <!------ Slider ------------>
             <center>
-            <div class="sliderInicio">
-                <div class="sliderBorder">
-                    <div class="sliderBorder2">
-                        <div id="sliderInicio" class="flexslider">
-                          <ul class="slides">
-                            <li><img src="images/banner1.jpg" /></li>
-  	    	                <li><img src="images/banner2.jpg" /></li>
-                          </ul>
+                <div class="sliderInicio">
+                    <div class="sliderBorder">
+                        <div class="sliderBorder2">
+                            <div id="sliderInicio" class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="images/banner1.jpg" /></li>
+                                    <li>
+                                        <img src="images/banner2.jpg" /></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </center>   
+            </center>
             <!------End Slider ------------>
         </div>
     </div>
     <div class="slide Slide2" data-slide="2">
         <!-- quienes somos slide-->
-        <div class="wrapper">
+        <div id="div2" class="wrapper">
             <div class="SlideTitle">
                 ¿QUIENES SOMOS?
             </div>
@@ -248,81 +181,241 @@
     </div>
     <div class="slide Slide3" data-slide="3">
         <!--Productos-->
-        <div class="wrapper">
-         <div class="SlideTitle">
+        <div id="div3" class="wrapper">
+            <div class="SlideTitle">
                 Productos
             </div>
-            <!-- 
-       usar lazy load asi las imagenes no cargan antes y la pagina funciona mas rapido
-       
-       <img class="lazy" data-src="path_to/image.jpg" src="" />
-       
-       -->
-            <!------ Slider ------------>
-            <center>
-        <section class="sliderProducts">
-        <div id="slider" class="flexslider bigSlider">
-          <ul class="slides">
-            <li><img src="images/Products/1.jpg" /></li>
-  	    	<li><img src="images/Products/2.jpg" /></li>
-            <li><img src="images/Products/3.jpg" /></li>
-            <li><img src="images/Products/1.jpg" /></li>
-  	    	<li><img src="images/Products/2.jpg" /></li>
-            <li><img src="images/Products/3.jpg" /></li>
-          </ul>
-        </div>
-        <br />
-        <div id="carousel" class="flexslider bigThumbnails">
-          <ul class="slides">
-            <li><img src="images/Products/1.jpg" /></li>
-  	    	<li><img src="images/Products/2.jpg" /></li>
-            <li><img src="images/Products/3.jpg" /></li>
-            <li><img src="images/Products/1.jpg" /></li>
-  	    	<li><img src="images/Products/2.jpg" /></li>
-            <li><img src="images/Products/3.jpg" /></li>
-          </ul>
-        </div>
-        </section>
-        </center>
-            <!------End Slider ------------>
+            <div id="work" class="page">
+                <div class="container">
+                    <!-- Portfolio Projects -->
+                    <div class="row">
+                        <div class="span3">
+                            <!-- Filter -->
+                            <nav id="options" class="work-nav">
+                                <ul id="filters" class="option-set" data-option-key="filter">
+                    	            <li class="type-work">Type of Work</li>
+                                    <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
+                                    <li><a href="#filter" data-option-value=".design">Design</a></li>
+                                    <li><a href="#filter" data-option-value=".photography">Photography</a></li>
+                                    <li><a href="#filter" data-option-value=".video">Video</a></li>
+                                </ul>
+                            </nav>
+                            <!-- End Filter -->
+                        </div>
+                        <div class="span9">
+                            <div class="row">
+                                <section id="projects">
+                    	<ul id="thumbs">
+                        
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 design">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="images/work/full/image-01-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-01.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 design">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Office" href="images/work/full/image-02-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-02.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 photography">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="images/work/full/image-03-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-03.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 video">
+                            	<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
+                            	<a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/51460511">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-08.jpg" alt="Video">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 photography">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Sea" href="images/work/full/image-04-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-04.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 photography">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Clouds" href="images/work/full/image-05-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-05.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 video">
+                            	<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
+                            	<a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/50834315">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-09.jpg" alt="Video">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 design">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Dark" href="images/work/full/image-06-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-06.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 design">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Beach" href="images/work/full/image-07-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/work/thumbs/image-07.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                            </li>
+                        	<!-- End Item Project -->
+                        </ul>
+                    </section>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Projects -->
+                </div>
+            </div>
         </div>
     </div>
     <div class="slide Slide4" data-slide="4">
         <!--Comprar-->
-        <div class="wrapper">
-            
-             <div class="boxes">
-                <p>list 1</p>
-  	    	    <p>list 2</p>
-                <p>list 3</p>
-                <p>list 4</p>
-                <p>list 5</p>
-              </div>
-            
+        <div id="div4" class="wrapper">
+            <div class="boxes">
+                <p>
+                    list 1</p>
+                <p>
+                    list 2</p>
+                <p>
+                    list 3</p>
+                <p>
+                    list 4</p>
+                <p>
+                    list 5</p>
+            </div>
         </div>
     </div>
     <div class="slide Slide5" data-slide="5">
         <!--Novedades-->
-        <div class="wrapper">
+        <div id="div5" class="wrapper">
         </div>
     </div>
     <div class="slide Slide6" data-slide="6">
         <!--Contacto-->
-        <div class="wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3280.585161068186!2d-58.689155899999996!3d-34.690418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc0f67870d291%3A0xb51e4a42818327b6!2sAv+Eva+Per%C3%B3n+4227!5e0!3m2!1sen!2sar!4v1397484230085"
-                width="400" height="300" frameborder="0" style="border: 0"></iframe>
+        <div id="div6" class="wrapper ">
+            <div class="col span_2_of_3">
+                <div class="contact-form">
+                    <h3>
+                        Contact Us</h3>
+                    <form method="post" action="contact-post.html">
+                    <div>
+                        <span>
+                            <label>
+                                Name</label></span> <span>
+                                    <input name="userName" type="text" class="textbox"></span>
+                    </div>
+                    <div>
+                        <span>
+                            <label>
+                                E-Mail</label></span> <span>
+                                    <input name="userEmail" type="text" class="textbox"></span>
+                    </div>
+                    <div>
+                        <span>
+                            <label>
+                                Mobile</label></span> <span>
+                                    <input name="userPhone" type="text" class="textbox"></span>
+                    </div>
+                    <div>
+                        <span>
+                            <label>
+                                Subject</label></span> <span>
+                                    <textarea name="userMsg"> </textarea></span>
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-primary btn1">Submit</a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col span_1_of_3">
+                <div class="contact_info">
+                    <h3>
+                        Find Us Here</h3>
+                    <div class="map">
+                    </div>
+                </div>
+            </div>
+            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3280.585161068186!2d-58.689155899999996!3d-34.690418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc0f67870d291%3A0xb51e4a42818327b6!2sAv+Eva+Per%C3%B3n+4227!5e0!3m2!1sen!2sar!4v1397484230085"
+                width="400" height="300" frameborder="0" style="border: 0"></iframe>-->
         </div>
     </div>
-    <div class="footer">
-       <hr align="middle"/>
+    <div id="footer" class="footer">
+        <hr align="middle" />
         <p>
             Avenida Eva Perón 4227 - CP B1716CHH - Libertad (Merlo) - Buenos Aires - Argentina
-            | (54) 0220 - 497 2871 | Email  <a class="mail" href="mailto:ciberdon.regalos@gmail.com">ciberdon.regalos@gmail.com</a>
+            | (54) 0220 - 497 2871 | Email <a class="mail" href="mailto:ciberdon.regalos@gmail.com">
+                ciberdon.regalos@gmail.com</a>
         </p>
         <div class="copy">
             <p>
                 © 2014 All rights Reserved | Design by @alanvojnovic & @nuelia</p>
         </div>
     </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/supersized.3.2.7.min.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/waypoints-sticky.js"></script>
+    <script src="js/jquery.isotope.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
