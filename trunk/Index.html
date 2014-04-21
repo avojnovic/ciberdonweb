@@ -43,10 +43,13 @@
         $(window).resize(sizeContent);
 
         function sizeContent() {
+
+
+
             var newHeight = $(window).height() - $("#header").height() - $("#footer").height() + "px";
             $("#div1").css("height", newHeight);
             $("#div1").css("margin", $("#header").height() + "px 0 0 0");
-
+            $("#work").css("height", newHeight);
             $("#div2").css("height", newHeight);
             $("#div3").css("height", newHeight);
             $("#div4").css("height", newHeight);
@@ -193,11 +196,11 @@
                             <!-- Filter -->
                             <nav id="options" class="work-nav">
                                 <ul id="filters" class="option-set" data-option-key="filter">
-                    	            <li class="type-work">Type of Work</li>
-                                    <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
-                                    <li><a href="#filter" data-option-value=".design">Design</a></li>
-                                    <li><a href="#filter" data-option-value=".photography">Photography</a></li>
-                                    <li><a href="#filter" data-option-value=".video">Video</a></li>
+                    	            <li class="type-work">Categorias</li>
+                                    <!--PARA CAMBIAR EL DEFAULT SE CAMBIA DESDE MAIN.JS-->
+                                    <li><a href="#filter" data-option-value=".tazas" class="selected">Tazas</a></li>
+                                    <li><a href="#filter" data-option-value=".remeras">Remeras</a></li>
+                                    <li><a href="#filter" data-option-value=".llaveros">Llaveros</a></li>
                                 </ul>
                             </nav>
                             <!-- End Filter -->
@@ -208,110 +211,63 @@
                     	<ul id="thumbs">
                         
 							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
+                        	<li class="item-thumbs span3 tazas">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="images/work/full/image-01-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Taza 1" href="images/work/full/image-01-full.jpg">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-01.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="images/work/thumbs/image-01.jpg" alt="Taza de ceramica esmaltada">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
+                        	<li class="item-thumbs span3 tazas">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Office" href="images/work/full/image-02-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Taza 2" href="images/work/full/image-02-full.jpg">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-02.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="images/work/thumbs/image-02.jpg" alt="Taza Plastica">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 photography">
+                        	<li class="item-thumbs span3 remeras">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="images/work/full/image-03-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Remera 1" href="images/work/full/image-03-full.jpg">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-03.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="images/work/thumbs/image-03.jpg" alt="Remera doble estampa">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 video">
-                            	<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                            	<a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/51460511">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-08.jpg" alt="Video">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 photography">
+                        	<li class="item-thumbs span3 remeras">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Sea" href="images/work/full/image-04-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Remera 2" href="images/work/full/image-03-full.jpg">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-04.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="images/work/thumbs/image-03.jpg" alt="Remera estampa simple">
                             </li>
                         	<!-- End Item Project -->
+                           
                             
 							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 photography">
+                        	<li class="item-thumbs span3 llaveros">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Clouds" href="images/work/full/image-05-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Llavero 1" href="images/work/full/image-07-full.jpg">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-05.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 video">
-                            	<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                            	<a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/50834315">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-09.jpg" alt="Video">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Dark" href="images/work/full/image-06-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-06.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Beach" href="images/work/full/image-07-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="images/work/thumbs/image-07.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="images/work/thumbs/image-07.jpg" alt="Llavero redondo">
                             </li>
                         	<!-- End Item Project -->
                         </ul>
@@ -326,19 +282,81 @@
     </div>
     <div class="slide Slide4" data-slide="4">
         <!--Comprar-->
-        <div id="div4" class="wrapper">
-            <div class="boxes">
-                <p>
-                    list 1</p>
-                <p>
-                    list 2</p>
-                <p>
-                    list 3</p>
-                <p>
-                    list 4</p>
-                <p>
-                    list 5</p>
-            </div>
+        <div id="div4" class="wrapper center">
+                <div class="col_1_of_4 span_1_of_4">
+                    <div class="list-box">
+                        <p class="numb">
+                            1.</p>
+                        <h4>
+                            Texto 1</h4>
+                        <p class="txt1">
+                            Primero</p>
+                        <p class="txt2">
+                            En Ciberdon Regalos, podrás adquirir varios productos personalizados. Para ello,
+                            solo debes decirnos que productos necesitas, y comentarnos la idea para poder personalizarlo.
+                            Podes dejarnos fotografías, nos comentas que texto querés que tenga, los colores
+                            y/ó temática para decorarlo. (En Ciberdon Regalos contamos con varios modelos para
+                            que ese regalo sea único)</p>
+                    </div>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <div class="list-box">
+                        <p class="numb">
+                            2.</p>
+                        <h4>
+                            asdasdasdr</h4>
+                        <p class="txt1">
+                            Segundo</p>
+                        <p class="txt2">
+                            Luego el grupo creativo de Ciberdon Regalos, se encargará de preparar las muestras
+                            del producto. Esta misma puede demorar de 1 a 3 días, y en esos días se diseñan
+                            de 2 a 3 muestras para que puedas elegir y/ó combinar entre los modelos personalizados.</p>
+                    </div>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <div class="list-box">
+                        <p class="numb">
+                            3.</p>
+                        <h4>
+                            asdasd</h4>
+                        <p class="txt1">
+                            Tercero</p>
+                        <p class="txt2">
+                            El día acordado, deberás confirmar el diseño elegido. Para lo cual, podrás acercarte
+                            personalmente o podríamos enviarte la muestra por e-mail. En esta confirmación,
+                            deberás corroborar que el diseño sea lo que realmente vos necesitas, que los textos,
+                            los colores y las fotos sean la deseadas. Caso contrario, se procede a corregir
+                            aquello que no sea lo deseado.</p>
+                    </div>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <div class="list-box">
+                        <p class="numb">
+                            4.</p>
+                        <h4>
+                            asdasdasd</h4>
+                        <p class="txt1">
+                            Cuarto</p>
+                        <p class="txt2">
+                            Una vez confirmada la muestra, el grupo creativo de Ciberdon Regalos, procede al
+                            armado del regalo personalizado para entregarlo el día de la fecha estipulada. Producto
+                            100% original y único en el mercado.</p>
+                    </div>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <div class="list-box">
+                        <p class="numb">
+                            5.</p>
+                        <h4>
+                            asdasdasd</h4>
+                        <p class="txt1">
+                            Quinto</p>
+                        <p class="txt2">
+                            El día pactado, solo deberás retirar tu regalo personalizado, con garantía de originalidad
+                            y creatividad. Ya no volverás a regalar siempre lo mismo, regalaras el grupo creativo
+                            de Ciberdon Regalos</p>
+                    </div>
+                </div>
         </div>
     </div>
     <div class="slide Slide5" data-slide="5">
@@ -387,7 +405,7 @@
             <div class="col span_1_of_3">
                 <div class="contact_info">
                     <h3>
-                        Find Us Here</h3>
+                        Encontranos aqui</h3>
                     <div class="map">
                     </div>
                 </div>

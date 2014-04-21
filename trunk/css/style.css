@@ -112,7 +112,7 @@ img
 /*end reset*/
 @font-face
 {
-    font-family: 'Humanst521 BT';
+    font-family: 'Titillium Web';
     src: url(../fonts/tt0290m_.ttf) format('truetype');
 }
 body
@@ -160,7 +160,7 @@ body
 .cssmenu > ul > li > a
 {
     text-transform: uppercase;
-    font: bold 10px/30px Humanst521 BT, sans-serif;
+    font: bold 10px/30px Titillium Web, sans-serif;
     color: #FFF;
     display: inline-block;
     padding: 0px 40px 0px;
@@ -246,6 +246,7 @@ body
 }
 .Slide4
 {
+
     background: #172D45;
 }
 .Slide5
@@ -280,9 +281,10 @@ body
 {
     text-align: center;
     color: #FFF;
-    font-size: 5em;
-    font: bold 30px/40px Humanst521 BT, sans-serif;
+    font-size: 2em;
+    font-family: 'Titillium Web', sans-serif;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .Slide2Body
@@ -291,8 +293,9 @@ body
     height: auto;
     text-align: justify;
     color: #FFF;
-    font-size: 3em;
-    font: normal 20px/20px Humanst521 BT, sans-serif;
+    font-size: 1em;
+    font-family: 'Titillium Web', sans-serif;
+    
 }
 .Slide2Body > h1
 {
@@ -303,31 +306,77 @@ body
 }
 
 
-.boxes
-{
-    margin: 0 auto;
-    width: 80%;
-  
 
-}
-.boxes p
-{
 
-    
-    background-color: #FFF;
-    
-    padding: 5px 5px 5px 5px;
-    width: 100%;
-    margin:  5px 5px 5px 5px;
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;    
-  
+/*  Slide4 COMPRAR   ============================================================================= */
+
+.center
+{
+    width:70%;
+	margin-left:auto;
+    margin-right:auto;
 }
 
-/*--Contact--*/
 
-.col{
+.col_1_of_4{
+	display: block;
+	float: left;
+	margin: 1% 1% 1% 1%;
+	
+}
+.col_1_of_4:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+.span_1_of_4 {
+	width: 18%;
+}
+.span_1_of_4 img{
+	display:block;
+}
+.span_1_of_4  h3 a{
+	color:#fff;
+	text-transform: uppercase;
+	font-size:1.3em;
+	line-height: 1.2;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight : normal;
+	margin-top: 0px;
+	letter-spacing: -1px;
+}
+.span_1_of_4  h3 a:hover{
+	color:#E4E24F;
+}
+
+.list-box .numb {
+	font-family: 'Titillium Web', sans-serif;
+	font-size:2em;
+	color: #1BBC9B;
+	display: block;
+}
+
+.list-box h4 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size:1em;
+	color: #1BBC9B;
+	display: block;
+}
+
+p.txt1{
+	font-size: 0.8125em;
+	line-height: 1.5em;
+	color: #FFFFFF;
+	margin-bottom: 5%;
+}
+p.txt2{
+	font-size: 0.8125em;
+	line-height: 1.5em;
+	color: #999;
+}
+
+
+/*--Slide 5 Contact--*/
+
+.col
+{
+  
 	display: block;
 	float:left;
 	margin: 1% 0 1% 3.6%;
@@ -344,16 +393,16 @@ body
 .span_2_of_3  h3,
 .span_1_of_3  h3 {
 	color: #888;
-	font-size: 2em;
+	font-size: 1em;
 	margin-bottom: 20px;
-	font-family: 'bebas_neueregular';
+	font-family: 'Titillium Web', sans-serif;
 }
 .contact-form{
 	position:relative;
-	padding-bottom:30px;
+
 }
 .contact-form div{
-	padding:5px 0;
+
 }
 .contact-form span{
 	display:block;
@@ -362,7 +411,7 @@ body
 	padding-bottom:5px;
 }
 .contact-form input[type="text"],.contact-form textarea{
-	padding:8px;
+
 	display:block;
 	width:70%;
 	background:#fcfcfc;
@@ -370,7 +419,7 @@ body
 	outline:none;
 	color:#464646;
 	font-size:0.8125em;
-	font-family:Arial, Helvetica, sans-serif;
+	    
 	box-shadow: inset 0px 0px 3px #999;
 	-webkit-box-shadow: inset 0px 0px 3px #999;
 	-moz-box-shadow: inset 0px 0px 3px #999;
@@ -379,27 +428,11 @@ body
 }
 .contact-form textarea{
 	resize:none;
-	height:120px;		
-}
-.company_address{
-	padding-top:26px;
-}
-.company_address p{
-	font-size:0.8125em;
-	color:#999;
-	line-height: 1.5em;
-}
-.company_address p span{
-	text-decoration:underline;
-	color:#333;
-	cursor:pointer;
-}
-.company_address p span:hover{
-	text-decoration:none;
+		
 }
 .map{
 	border:1px solid #C7C7C7;
-	margin-bottom:15px;
+	
 }
 
 /*--footer--*/
@@ -429,7 +462,7 @@ body
 
 .footer p
 {
-    font-family: 'Humanst521 BT';
+    font-family: 'Titillium Web';
     text-transform: uppercase;
     font-size: 1 em;
     line-height: 1em;
@@ -438,7 +471,7 @@ body
 
 .footer p a
 {
-    font-family: 'Humanst521 BT';
+    font-family: 'Titillium Web';
     text-transform: uppercase;
     font-size: 2 em;
     line-height: 1em;
@@ -485,3 +518,435 @@ ul.follow_icon li
 }
 
 
+/***** Media Quries *****/
+@media only screen and (max-width: 1024px) {
+	.wrap{
+		width:95%;
+	}	
+}
+/*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
+ @media only screen and (max-width: 640px) and (min-width: 480px) {
+	.wrap{
+		width:95%;
+	}
+	.col_1_of_5{ 
+		margin: 1% 0 1% 0%;
+	}
+	.span_1_of_5 {
+		width:94%;
+		padding:3%;  
+	}
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+ @media only screen and (max-width: 480px) {
+	.wrap{
+		width:95%;
+	}
+	.col_1_of_5{ 
+		margin: 1% 0 1% 0%;
+	}
+	.span_1_of_5 {
+		width:92%;
+		padding:4%;
+	}
+}
+.grid_img{
+	text-align:center;
+	margin-bottom: 4%;
+}
+.content-top{
+	margin-bottom:5%;
+}
+
+
+/*--responsive design--*/
+@media (max-width:1366px){
+	.wrap{
+		width:90%;
+	}	
+	.right-text {
+		width: 79%;
+	}
+}
+@media (max-width:1280px){
+	.wrap{
+		width:90%;
+	}	
+	.right-text {
+		width:78%;
+	}
+}
+@media (max-width:1024px){
+	.wrap{
+		width:90%;
+	}	
+	.right-text {
+		width:73%;
+	}
+	.about-desc {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	.header-text .phone {
+		background: url(../images/phone.png) left 7px no-repeat;
+	}
+}
+@media (max-width:800px){
+	.wrap{
+		width:90%;
+	}	
+	.right-text {
+		width:65%;
+	}
+	.about-desc {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	.logo h1 a {
+		font-size: 5em;
+	}
+	.header-text {
+		margin: -88px 0px;
+	}
+	.cssmenu > ul > li > a {
+		font: normal 14px/30px PT Sans, sans-serif;
+		padding: 4px 13px;
+		line-height: 4.8em;
+	}
+	.top-box h2 {
+		font-size: 2.5em;
+	}
+	hr {
+		width: 350px;
+	}
+	.span_1_of_5 h3 {
+		font-size: 13px;
+	}
+	.span_1_of_4 h3 a {
+		font-size: 1.2em;
+	}
+	.btn.btn-primary {
+		font-size: 0.8125em;
+	}
+	.span_1_of_about1 h3 {
+		font-size: 1.7em;
+	}
+	.list-box .numb {
+		font-size: 3em;
+	}
+	h4 {
+		font-size: 1.2em;
+	}
+	.footer-text h2 {
+		font-size: 2.5em;
+	}
+}
+@media (max-width:768px){
+	.wrap{
+		width:90%;
+	}
+	.right-text {
+		width: 64%;
+	}	
+}
+@media (max-width:640px){
+	.wrap{
+		width:90%;
+	}	
+	.right-text {
+		width:65%;
+	}
+	.about-desc {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	.logo h1 a {
+		font-size:4em;
+	}
+	.header-text {
+		margin:-79px -20px;
+	}
+	.cssmenu > ul > li > a {
+		font: normal 14px/30px PT Sans, sans-serif;
+		padding: 4px 13px;
+		line-height: 4.8em;
+	}
+	.top-box h2 {
+		font-size: 2.5em;
+	}
+	hr {
+		width: 350px;
+	}
+	.span_1_of_5 h3 {
+		font-size: 13px;
+	}
+	.span_1_of_4 h3 a {
+		font-size: 1.2em;
+	}
+	.btn.btn-primary {
+		font-size: 0.8125em;
+	}
+	.span_1_of_about1 h3 {
+		font-size: 1.7em;
+	}
+	.list-box .numb {
+		font-size: 3em;
+	}
+	h4 {
+		font-size: 1.2em;
+	}
+	.footer-text h2 {
+		font-size: 2.5em;
+	}
+	.header {
+		padding:20px 0;
+	}
+	.header-text .phone {
+		background: url(../images/phone.png) left 9px no-repeat;
+	}
+	.span_1_of_about {
+		width: 100%;
+	}
+	.span_1_of_about1 {
+		width: 100%;
+	}
+	.about-topgrid1 {
+		width: 100%;
+		float: none;
+		margin-right: 0px;
+	}
+	.about-histore {
+		float: none;
+		width: 100%;
+	}
+	.about-services {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	.span_1_of_about h3 {
+		font-size: 1.7em;
+	}
+	.about-topgrid1 h3 {
+		font-size: 1.7em;
+	}
+	.about-histore h3 {
+		font-size: 1.7em;
+	}
+	.about-services h3 {
+		font-size: 1.7em;
+	}
+}
+@media (max-width:480px){
+	.wrap{
+		width:90%;
+	}	
+	.right-text {
+		width:65%;
+	}
+	.about-desc {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	.logo h1 a {
+		font-size:4em;
+	}
+	.header-text {
+		margin: 0;
+		float: none;
+		text-align: center;
+	}
+	.cssmenu > ul > li > a {
+		font: normal 13px/30px PT Sans, sans-serif;
+		padding: 4px 10px;
+		line-height: 4.8em;
+	}
+	.top-box h2 {
+		font-size:2em;
+	}
+	hr {
+		width: 350px;
+	}
+	.span_1_of_5 h3 {
+		font-size: 13px;
+	}
+	.span_1_of_4 h3 a {
+		font-size: 1.2em;
+	}
+	.btn.btn-primary {
+		font-size: 0.8125em;
+	}
+	.span_1_of_about1 h3 {
+		font-size: 1.7em;
+	}
+	.list-box .numb {
+		font-size: 3em;
+	}
+	h4 {
+		font-size: 1.2em;
+	}
+	.footer-text h2 {
+		font-size: 2em;
+	}
+	.header {
+		padding:20px 0;
+	}
+	.padd {
+		padding: 0 20px;
+	}
+	.header-text .phone {
+		background: url(../images/phone.png) left 9px no-repeat;
+	}
+	.span_1_of_about {
+		width: 100%;
+	}
+	.span_1_of_about1 {
+		width: 100%;
+	}
+	.about-topgrid1 {
+		width: 100%;
+		float: none;
+		margin-right: 0px;
+	}
+	.about-histore {
+		float: none;
+		width: 100%;
+	}
+	.about-services {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	.span_1_of_about h3 {
+		font-size: 1.7em;
+	}
+	.about-topgrid1 h3 {
+		font-size: 1.7em;
+	}
+	.about-histore h3 {
+		font-size: 1.7em;
+	}
+	.about-services h3 {
+		font-size: 1.7em;
+	}
+	.span_2_of_3 h3, .span_1_of_3 h3 {
+		font-size: 1.7em;l
+	}
+}
+@media (max-width:320px){
+	.wrap{
+		width:90%;
+	}	
+	.right-text {
+		width:65%;
+	}
+	.about-desc {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	.logo h1 a {
+		font-size:4em;
+	}
+	.header-text {
+		margin: 0;
+		float: none;
+		text-align: center;
+	}
+	.cssmenu > ul > li > a {
+		font: normal 13px/30px PT Sans, sans-serif;
+		padding: 0px 0px;
+		line-height: 2.8em;
+	}
+	.top-box h2 {
+		font-size:2em;
+	}
+	hr {
+		width:230px;
+	}
+	.span_1_of_5 h3 {
+		font-size: 13px;
+	}
+	.span_1_of_4 h3 a {
+		font-size: 1.2em;
+	}
+	.btn.btn-primary {
+		font-size: 0.8125em;
+	}
+	.span_1_of_about1 h3 {
+		font-size: 1.7em;
+	}
+	.list-box .numb {
+		font-size: 3em;
+	}
+	h4 {
+		font-size: 1.2em;
+	}
+	.footer-text h2 {
+		font-size: 2em;
+	}
+	.header {
+		padding:20px 0;
+	}
+	.padd {
+		padding: 0 20px;
+	}
+	.header-text .phone {
+		background: url(../images/phone.png) left 9px no-repeat;
+	}
+	.span_1_of_about {
+		width: 100%;
+	}
+	.span_1_of_about1 {
+		width: 100%;
+	}
+	.about-topgrid1 {
+		width: 100%;
+		float: none;
+		margin-right: 0px;
+	}
+	.about-histore {
+		float: none;
+		width: 100%;
+	}
+	.about-services {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	.span_1_of_about h3 {
+		font-size: 1.7em;
+	}
+	.about-topgrid1 h3 {
+		font-size: 1.7em;
+	}
+	.about-histore h3 {
+		font-size: 1.7em;
+	}
+	.about-services h3 {
+		font-size: 1.7em;
+	}
+	.span_2_of_3 h3, .span_1_of_3 h3 {
+		font-size: 1.7em;
+	}
+	.top-box p {
+		width: 90%;
+	}
+	.cssmenu > ul > li {
+		display: block;
+	}
+	.cssmenu {
+		padding: 2px 0;
+	}
+	.follow_icon li a img {
+		width: 60%;
+	}
+	ul.follow_icon li {
+		margin-left: -3px;
+	}
+}

@@ -65,8 +65,11 @@ BRUSHED.filter = function (){
 			  // options
 			  animationEngine: 'best-available',
 			  itemSelector : '.item-thumbs',
-			  layoutMode : 'fitRows'
+			  layoutMode : 'masonry'
 			});
+            $container.isotope({
+              filter: '.tazas'
+            });
 		});
 	
 		
