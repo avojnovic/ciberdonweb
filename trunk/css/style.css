@@ -154,6 +154,7 @@ body
     position: relative;
     height: auto;
     min-height: 35px;
+    max-height:35px;
     display: inline-block;
 }
 
@@ -201,6 +202,7 @@ body
 .marginLink
 {
     margin-left: 10px;
+  
 }
 
 
@@ -276,6 +278,13 @@ body
     border-color: #25384D;
     border-width: 20px;
 }
+.sliderInicio   
+{
+    position:relative;
+	width:70%;
+	margin:0 auto;
+  }
+
 /*--content--*/
 .SlideTitle
 {
@@ -313,8 +322,7 @@ body
 .center
 {
     width:70%;
-	margin-left:auto;
-    margin-right:auto;
+
 }
 
 
@@ -377,22 +385,19 @@ p.txt2{
 .col
 {
   
-	display: block;
-	float:left;
-	margin: 1% 0 1% 3.6%;
+	display:block;
+	float: left;
+	margin: 1% 1% 1% 1%;
+	 width: 40%;
+	
 }
 .col:first-child{
-	margin-left:0;
+
 }	
-.span_2_of_3 {
-	width: 66.1%;
-}
-.span_1_of_3 {
-	width: 30.2%;
-}
-.span_2_of_3  h3,
-.span_1_of_3  h3 {
-	color: #888;
+
+.col_1_of_2  h3,
+.col_2_of_2  h3 {
+	color: #FFFFFF;
 	font-size: 1em;
 	margin-bottom: 20px;
 	font-family: 'Titillium Web', sans-serif;
@@ -520,13 +525,13 @@ ul.follow_icon li
 
 /***** Media Quries *****/
 @media only screen and (max-width: 1024px) {
-	.wrap{
+	.wrapper{
 		width:95%;
 	}	
 }
 /*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
  @media only screen and (max-width: 640px) and (min-width: 480px) {
-	.wrap{
+	.wrapper{
 		width:95%;
 	}
 	.col_1_of_5{ 
@@ -540,7 +545,7 @@ ul.follow_icon li
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
  @media only screen and (max-width: 480px) {
-	.wrap{
+	.wrapper{
 		width:95%;
 	}
 	.col_1_of_5{ 
@@ -562,7 +567,7 @@ ul.follow_icon li
 
 /*--responsive design--*/
 @media (max-width:1366px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}	
 	.right-text {
@@ -570,7 +575,7 @@ ul.follow_icon li
 	}
 }
 @media (max-width:1280px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}	
 	.right-text {
@@ -578,7 +583,7 @@ ul.follow_icon li
 	}
 }
 @media (max-width:1024px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}	
 	.right-text {
@@ -594,7 +599,7 @@ ul.follow_icon li
 	}
 }
 @media (max-width:800px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}	
 	.right-text {
@@ -612,9 +617,9 @@ ul.follow_icon li
 		margin: -88px 0px;
 	}
 	.cssmenu > ul > li > a {
-		font: normal 14px/30px PT Sans, sans-serif;
+	 font: bold 10px/30px Titillium Web, sans-serif;
 		padding: 4px 13px;
-		line-height: 4.8em;
+	
 	}
 	.top-box h2 {
 		font-size: 2.5em;
@@ -645,7 +650,7 @@ ul.follow_icon li
 	}
 }
 @media (max-width:768px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}
 	.right-text {
@@ -653,7 +658,7 @@ ul.follow_icon li
 	}	
 }
 @media (max-width:640px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}	
 	.right-text {
@@ -671,9 +676,9 @@ ul.follow_icon li
 		margin:-79px -20px;
 	}
 	.cssmenu > ul > li > a {
-		font: normal 14px/30px PT Sans, sans-serif;
+		 font: bold 10px/30px Titillium Web, sans-serif;
 		padding: 4px 13px;
-		line-height: 4.8em;
+
 	}
 	.top-box h2 {
 		font-size: 2.5em;
@@ -703,7 +708,7 @@ ul.follow_icon li
 		font-size: 2.5em;
 	}
 	.header {
-		padding:20px 0;
+
 	}
 	.header-text .phone {
 		background: url(../images/phone.png) left 9px no-repeat;
@@ -741,8 +746,33 @@ ul.follow_icon li
 		font-size: 1.7em;
 	}
 }
+
+
+@media (max-width:600px){
+
+	.header 
+	{
+	    position:absolute;
+	    top:0px;
+	    height:210px;
+		
+	}
+	.cssmenu > ul > li {
+		display: block;
+	}
+	.cssmenu {
+		padding: 2px 0;
+	}
+	
+	.sliderInicio
+	{
+	   width:100%;
+	 }
+	
+	}
+
 @media (max-width:480px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}	
 	.right-text {
@@ -762,9 +792,9 @@ ul.follow_icon li
 		text-align: center;
 	}
 	.cssmenu > ul > li > a {
-		font: normal 13px/30px PT Sans, sans-serif;
+		 font: bold 10px/30px Titillium Web, sans-serif;
 		padding: 4px 10px;
-		line-height: 4.8em;
+	
 	}
 	.top-box h2 {
 		font-size:2em;
@@ -793,9 +823,7 @@ ul.follow_icon li
 	.footer-text h2 {
 		font-size: 2em;
 	}
-	.header {
-		padding:20px 0;
-	}
+	
 	.padd {
 		padding: 0 20px;
 	}
@@ -834,12 +862,12 @@ ul.follow_icon li
 	.about-services h3 {
 		font-size: 1.7em;
 	}
-	.span_2_of_3 h3, .span_1_of_3 h3 {
+	.col_2_of_2 h3, .col_1_of_2 h3 {
 		font-size: 1.7em;l
 	}
 }
 @media (max-width:320px){
-	.wrap{
+	.wrapper{
 		width:90%;
 	}	
 	.right-text {
@@ -859,9 +887,9 @@ ul.follow_icon li
 		text-align: center;
 	}
 	.cssmenu > ul > li > a {
-		font: normal 13px/30px PT Sans, sans-serif;
+		 font: bold 10px/30px Titillium Web, sans-serif;
 		padding: 0px 0px;
-		line-height: 2.8em;
+	
 	}
 	.top-box h2 {
 		font-size:2em;
@@ -890,9 +918,7 @@ ul.follow_icon li
 	.footer-text h2 {
 		font-size: 2em;
 	}
-	.header {
-		padding:20px 0;
-	}
+	
 	.padd {
 		padding: 0 20px;
 	}
@@ -931,18 +957,13 @@ ul.follow_icon li
 	.about-services h3 {
 		font-size: 1.7em;
 	}
-	.span_2_of_3 h3, .span_1_of_3 h3 {
+	.col_2_of_2 h3, .col_1_of_2 h3 {
 		font-size: 1.7em;
 	}
 	.top-box p {
 		width: 90%;
 	}
-	.cssmenu > ul > li {
-		display: block;
-	}
-	.cssmenu {
-		padding: 2px 0;
-	}
+
 	.follow_icon li a img {
 		width: 60%;
 	}
