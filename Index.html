@@ -43,9 +43,33 @@
 
         function sizeContent() {
 
+            var newHeight = 0;
+            var newHeight2 = 0;
+            var footerPosition = $("#footer").css('position');
+            var headerPosition = $("#header").css('position');
 
 
-            var newHeight = $(window).height() - $("#header").height() - $("#footer").height() + "px";
+            if (footerPosition == "fixed") 
+            {
+                newHeight = $(window).height() - $("#header").height() - $("#footer").height() + "px";
+                $("#div6").css("height", newHeight);
+                $("#div6").css("margin-bottom", $("#footer").height() + "px");
+            }
+            else 
+            {
+                newHeight = $(window).height() - $("#header").height() + "px";
+
+                newHeight2 = $(window).height() - $("#header").height() - $("#footer").height() + "px";              
+                $("#div6").css("height", newHeight2);
+            }
+
+            if (headerPosition != "fixed") 
+            {
+                newHeight = $(window).height() + "px";
+                $("#div6").css("height", newHeight);
+            }
+
+          
             $("#div1").css("height", newHeight);
             $("#div1").css("margin-top", $("#header").height() + "px");
             $("#work").css("height", newHeight);
@@ -53,15 +77,15 @@
             $("#div3").css("height", newHeight);
             $("#div4").css("height", newHeight);
             $("#div5").css("height", newHeight);
-            $("#div6").css("height", newHeight);
-            $("#div6").css("margin-bottom", $("#footer").height() + "px");
+          
+           
 
         }
     </script>
        <script type="text/javascript" src="js/navigation.js"></script>
 </head>
 <body>
-    <div id="header" class="header">
+    <div id="header" class="header colorHeader">
         <div data-slide="1" class="logo menu-button">
             <a href="#">
                 <img src="images/ciberdon.png" align="left" id="img" alt="" /></a>
@@ -69,27 +93,27 @@
         <div class="cssmenu">
             <ul>
                
-                <li class="slide1mnu menu-button" data-slide="1"><a href="#"><span>
+                <li class="color1 menu-button" data-slide="1"><a href="#"><span>
                     <img class="imgMenu" src="images/btnHome.png" align="left" alt="" /><div class="marginLink">
                         Inicio</div>
                 </span></a></li>
-                <li class="slide2mnu menu-button" data-slide="2"><a href="#"><span>
+                <li class="color2 menu-button" data-slide="2"><a href="#"><span>
                     <img class="imgMenu" src="images/btnAbout.png" align="left" alt="" /><div class="marginLink">
                         Ciberdon</div>
                 </span></a></li>
-                <li class="slide3mnu menu-button" data-slide="3"><a href="#"><span>
+                <li class="color3 menu-button" data-slide="3"><a href="#"><span>
                     <img class="imgMenu" src="images/btnProducts.png" align="left" alt="" /><div class="marginLink">
                         Productos</div>
                 </span></a></li>
-                <li class="slide4mnu menu-button" data-slide="4"><a href="#"><span>
+                <li class="color4 menu-button" data-slide="4"><a href="#"><span>
                     <img class="imgMenu" src="images/btnBuy.png" align="left" alt="" /><div class="marginLink">
                         Comprar</div>
                 </span></a></li>
-                <li class="slide5mnu menu-button" data-slide="5"><a href="#"><span>
+                <li class="color5 menu-button" data-slide="5"><a href="#"><span>
                     <img class="imgMenu" src="images/btnNews.png" align="left" alt="" /><div class="marginLink">
                         Novedades</div>
                 </span></a></li>
-                <li class="slide6mnu menu-button" data-slide="6"><a href="#"><span>
+                <li class="color6 menu-button" data-slide="6"><a href="#"><span>
                     <img class="imgMenu" src="images/btnContact.png" align="left" alt="" /><div class="marginLink">
                         Contacto</div>
                 </span></a></li>
@@ -109,7 +133,7 @@
                 <img class="imgRotate" src="images/googleplus_fill.png" alt=""></a></li>
         </ul>
     </div>
-    <div class="slide Slide1" data-slide="1">
+    <div class="slide Slide1 color1" data-slide="1">
         <div id="div1" class="wrapper">
             <!------ Slider ------------>
             <center>
@@ -131,7 +155,7 @@
             <!------End Slider ------------>
         </div>
     </div>
-    <div class="slide Slide2" data-slide="2">
+    <div class="slide Slide2 color2" data-slide="2">
         <!-- quienes somos slide-->
         <div id="div2" class="wrapper">
             <div class="SlideTitle">
@@ -179,7 +203,7 @@
             </center>
         </div>
     </div>
-    <div class="slide Slide3" data-slide="3">
+    <div class="slide Slide3 color3" data-slide="3">
         <!--Productos-->
         <div id="div3" class="wrapper">
             <div class="SlideTitle">
@@ -277,7 +301,7 @@
             </div>
         </div>
     </div>
-    <div class="slide Slide4" data-slide="4">
+    <div class="slide Slide4 color4" data-slide="4">
         <!--Comprar-->
         <div id="div4" class="wrapper center">
                 <div class="col_1_of_4 span_1_of_4">
@@ -285,9 +309,9 @@
                         <p class="numb">
                             1.</p>
                         <h4>
-                            Texto 1</h4>
+                            Pedido</h4>
                         <p class="txt1">
-                            Primero</p>
+                            Paso Uno</p>
                         <p class="txt2">
                             En Ciberdon Regalos, podrás adquirir varios productos personalizados. Para ello,
                             solo debes decirnos que productos necesitas, y comentarnos la idea para poder personalizarlo.
@@ -301,9 +325,9 @@
                         <p class="numb">
                             2.</p>
                         <h4>
-                            asdasdasdr</h4>
+                            Diseño</h4>
                         <p class="txt1">
-                            Segundo</p>
+                            Paso Dos</p>
                         <p class="txt2">
                             Luego el grupo creativo de Ciberdon Regalos, se encargará de preparar las muestras
                             del producto. Esta misma puede demorar de 1 a 3 días, y en esos días se diseñan
@@ -315,9 +339,9 @@
                         <p class="numb">
                             3.</p>
                         <h4>
-                            asdasd</h4>
+                            Muestra</h4>
                         <p class="txt1">
-                            Tercero</p>
+                            Paso Tres</p>
                         <p class="txt2">
                             El día acordado, deberás confirmar el diseño elegido. Para lo cual, podrás acercarte
                             personalmente o podríamos enviarte la muestra por e-mail. En esta confirmación,
@@ -331,9 +355,9 @@
                         <p class="numb">
                             4.</p>
                         <h4>
-                            asdasdasd</h4>
+                            Armado</h4>
                         <p class="txt1">
-                            Cuarto</p>
+                            Paso Cuatro</p>
                         <p class="txt2">
                             Una vez confirmada la muestra, el grupo creativo de Ciberdon Regalos, procede al
                             armado del regalo personalizado para entregarlo el día de la fecha estipulada. Producto
@@ -345,9 +369,9 @@
                         <p class="numb">
                             5.</p>
                         <h4>
-                            asdasdasd</h4>
+                            Entrega</h4>
                         <p class="txt1">
-                            Quinto</p>
+                            Paso Cinco</p>
                         <p class="txt2">
                             El día pactado, solo deberás retirar tu regalo personalizado, con garantía de originalidad
                             y creatividad. Ya no volverás a regalar siempre lo mismo, regalaras el grupo creativo
@@ -356,22 +380,22 @@
                 </div>
         </div>
     </div>
-    <div class="slide Slide5" data-slide="5">
+    <div class="slide Slide5 color5" data-slide="5">
         <!--Novedades-->
         <div id="div5" class="wrapper">
         </div>
     </div>
-    <div class="slide Slide6" data-slide="6">
+    <div class="slide Slide6 color6" data-slide="6">
         <!--Contacto-->
         <div id="div6" class="wrapper center">
             <div class="col col_1_of_2">
                 <div class="contact-form">
-                    <h3>Contact Us</h3>
+                    <h3>Contactanos</h3>
                     <form method="post" action="contact-post.html">
                     <div>
                         <span>
                             <label>
-                                Name</label></span> <span>
+                                Nombre</label></span> <span>
                                     <input name="userName" type="text" class="textbox"></span>
                     </div>
                     <div>
@@ -383,17 +407,17 @@
                     <div>
                         <span>
                             <label>
-                                Mobile</label></span> <span>
+                                Telefono</label></span> <span>
                                     <input name="userPhone" type="text" class="textbox"></span>
                     </div>
                     <div>
                         <span>
                             <label>
-                                Subject</label></span> <span>
+                                Consulta</label></span> <span>
                                     <textarea name="userMsg"> </textarea></span>
                     </div>
                     <div>
-                        <a href="#" class="btn btn-primary btn1">Submit</a>
+                        <a href="#" class="btn btn-primary btn1">Enviar</a>
                     </div>
                     </form>
                 </div>
@@ -402,16 +426,15 @@
                 <div>
                     <h3>
                         Encontranos aqui</h3>
-                    <div class="map">
-                      <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3280.585161068186!2d-58.689155899999996!3d-34.690418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc0f67870d291%3A0xb51e4a42818327b6!2sAv+Eva+Per%C3%B3n+4227!5e0!3m2!1sen!2sar!4v1397484230085"
-                width="400" height="300" frameborder="0" style="border: 0"></iframe>-->
+                    <div>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3280.5851610681834!2d-58.689156!3d-34.690418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc0f5d6140797%3A0xc25e853d26783b30!2sCiberdon+Regalos!5e0!3m2!1sen!2sar!4v1399045213766" width="400" height="300" frameborder="0" style="border:0"></iframe>
                     </div>
                 </div>
             </div>
           
         </div>
     </div>
-    <div id="footer" class="footer">
+    <div id="footer" class="footer colorFooter">
         <hr align="middle" />
         <p>
             Avenida Eva Perón 4227 - CP B1716CHH - Libertad (Merlo) - Buenos Aires - Argentina
